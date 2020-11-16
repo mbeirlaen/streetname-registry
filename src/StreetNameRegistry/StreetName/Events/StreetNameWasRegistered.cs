@@ -9,10 +9,16 @@ namespace StreetNameRegistry.StreetName.Events
     [EventDescription("De straatnaam werd geregistreerd.")]
     public class StreetNameWasRegistered : IHasProvenance, ISetProvenance
     {
+        [EventPropertyDescription("Interne GUID van de straatnaam.")]
         public Guid StreetNameId { get; }
 
+        [EventPropertyDescription("Interne GUID van de gemeente aan dewelke de straatnaam is toegewezen.")]
         public Guid MunicipalityId { get; }
+        
+        [EventPropertyDescription("NIS-code (= objectidentificator) van de gemeente aan dewelke de straatnaam is toegewezen.")]
         public string NisCode { get; }
+        
+        [EventPropertyDescription("Metadata bij het event.")]
         public ProvenanceData Provenance { get; private set; }
 
         public StreetNameWasRegistered(
