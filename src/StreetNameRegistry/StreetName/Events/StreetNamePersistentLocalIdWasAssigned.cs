@@ -16,7 +16,7 @@ namespace StreetNameRegistry.StreetName.Events
         [EventPropertyDescription("Objectidentificator van de straatnaam.")]
         public int PersistentLocalId { get; }
         
-        [EventPropertyDescription("Tijdstip waarop de objectidentificator van de straatnaam werd toegekend (info uit CRAB).")]
+        [EventPropertyDescription("Tijdstip waarop de objectidentificator van de straatnaam werd toegekend.")]
         public Instant AssignmentDate { get; }
         
         [EventPropertyDescription("Metadata bij het event.")]
