@@ -9,7 +9,10 @@ namespace StreetNameRegistry.StreetName.Events
     [EventDescription("De straatnaam werd in gebruik genomen.")]
     public class StreetNameBecameCurrent : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
+        [EventPropertyDescription("Interne GUID van de straatnaam.")]
         public Guid StreetNameId { get; }
+        
+        [EventPropertyDescription("Metadata bij het event.")]
         public ProvenanceData Provenance { get; private set; }
 
         public StreetNameBecameCurrent(StreetNameId streetNameId)
