@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNameBecameComplete")]
-    [EventDescription("De straatnaam werd vervolledigd.")]
+    [EventDescription("De straatnaam voldoet aan het informatiemodel (wegens volledig).")]
     public class StreetNameBecameComplete : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
