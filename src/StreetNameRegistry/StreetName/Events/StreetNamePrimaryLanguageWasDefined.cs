@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNamePrimaryLanguageWasDefined")]
-    [EventDescription("De straatnaam primaire taal werd gedefinieerd.")]
+    [EventDescription("De primaire taal waarin de straatnaam beschikbaar is, werd bepaald.")]
     public class StreetNamePrimaryLanguageWasDefined : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
