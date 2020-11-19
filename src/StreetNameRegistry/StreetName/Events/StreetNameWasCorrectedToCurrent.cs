@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNameWasCorrectedToCurrent")]
-    [EventDescription("De straatnaam werd in gebruik via correctie.")]
+    [EventDescription("De straatnaam kreeg status 'in gebruik' (via correctie).")]
     public class StreetNameWasCorrectedToCurrent : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
