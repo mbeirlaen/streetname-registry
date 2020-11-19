@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNameNameWasCleared")]
-    [EventDescription("De straatnaam (in een bepaalde taal) werd gewist.")]
+    [EventDescription("De naam van de straatnaam (in een bepaalde taal) werd gewist.")]
     public class StreetNameNameWasCleared : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
