@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNameStatusWasRemoved")]
-    [EventDescription("De straatnaam status werd verwijderd.")]
+    [EventDescription("De straatnaamstatus werd verwijderd.")]
     public class StreetNameStatusWasRemoved : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
