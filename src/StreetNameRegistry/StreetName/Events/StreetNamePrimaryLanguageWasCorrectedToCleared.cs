@@ -9,7 +9,10 @@ namespace StreetNameRegistry.StreetName.Events
     [EventDescription("De straatnaam primaire taal werd gewist via correctie.")]
     public class StreetNamePrimaryLanguageWasCorrectedToCleared : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
+        [EventPropertyDescription("Interne GUID van de straatnaam.")]
         public Guid StreetNameId { get; }
+        
+        [EventPropertyDescription("Metadata bij het event.")]
         public ProvenanceData Provenance { get; private set; }
 
         public StreetNamePrimaryLanguageWasCorrectedToCleared(StreetNameId streetNameId)
