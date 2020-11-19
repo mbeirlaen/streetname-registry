@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Newtonsoft.Json;
 
     [EventName("StreetNameWasRegistered")]
-    [EventDescription("De straatnaam werd geregistreerd.")]
+    [EventDescription("De straatnaam werd aangemaakt in het register.")]
     public class StreetNameWasRegistered : IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
