@@ -6,11 +6,16 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNameHomonymAdditionWasCorrectedToCleared")]
-    [EventDescription("De straatnaam homoniem toevoeging werd gewist door correctie.")]
+    [EventDescription("De straatnaam homoniemtoevoeging werd gewist door correctie.")]
     public class StreetNameHomonymAdditionWasCorrectedToCleared : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
+        [EventPropertyDescription("Interne GUID van de straatnaam.")]
         public Guid StreetNameId { get; }
+        
+        [EventPropertyDescription("Taal (voluit, EN) waarin de officiële straatnaam staat.")]
         public Language? Language { get; }
+        
+        [EventPropertyDescription("Metadata bij het event.")]
         public ProvenanceData Provenance { get; private set; }
 
         public StreetNameHomonymAdditionWasCorrectedToCleared(
