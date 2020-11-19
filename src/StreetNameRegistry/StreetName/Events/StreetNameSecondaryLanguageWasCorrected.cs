@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNameSecondaryLanguageWasCorrected")]
-    [EventDescription("De straatnaam secundaire taal werd gecorrigeerd.")]
+    [EventDescription("De secundaire taal waarin de straatnaam beschikbaar is, werd gecorrigeerd.")]
     public class StreetNameSecondaryLanguageWasCorrected : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
