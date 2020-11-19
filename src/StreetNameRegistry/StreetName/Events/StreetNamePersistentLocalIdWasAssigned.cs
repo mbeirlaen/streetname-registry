@@ -10,9 +10,16 @@ namespace StreetNameRegistry.StreetName.Events
     [EventDescription("De straatnaam kreeg een persistente lokale identificator toegekend.")]
     public class StreetNamePersistentLocalIdWasAssigned : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
+        [EventPropertyDescription("Interne GUID van de straatnaam.")]
         public Guid StreetNameId { get; }
+        
+        [EventPropertyDescription("Objectidentificator van de straatnaam.")]
         public int PersistentLocalId { get; }
+        
+        [EventPropertyDescription("Tijdstip waarop de objectidentificator van de straatnaam werd toegekend (info uit CRAB).")]
         public Instant AssignmentDate { get; }
+        
+        [EventPropertyDescription("Metadata bij het event.")]
         public ProvenanceData Provenance { get; private set; }
 
         public StreetNamePersistentLocalIdWasAssigned(
