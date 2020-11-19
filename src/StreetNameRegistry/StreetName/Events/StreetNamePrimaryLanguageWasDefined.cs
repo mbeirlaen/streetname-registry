@@ -9,9 +9,13 @@ namespace StreetNameRegistry.StreetName.Events
     [EventDescription("De straatnaam primaire taal werd gedefinieerd.")]
     public class StreetNamePrimaryLanguageWasDefined : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
+        [EventPropertyDescription("Interne GUID van de straatnaam.")]
         public Guid StreetNameId { get; }
 
+        [EventPropertyDescription("Primaire officiële taal (voluit, EN) van de straatnaam.")]
         public Language PrimaryLanguage { get; }
+        
+        [EventPropertyDescription("Metadata bij het event.")]
         public ProvenanceData Provenance { get; private set; }
 
         public StreetNamePrimaryLanguageWasDefined(
