@@ -6,7 +6,7 @@ namespace StreetNameRegistry.StreetName.Events
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
 
     [EventName("StreetNameBecameIncomplete")]
-    [EventDescription("De straatnaam werd onvolledig.")]
+    [EventDescription("De straatnaam voldoet niet meer aan het informatiemodel (wegens niet volledig).")]
     public class StreetNameBecameIncomplete : IHasStreetNameId, IHasProvenance, ISetProvenance
     {
         [EventPropertyDescription("Interne GUID van de straatnaam.")]
