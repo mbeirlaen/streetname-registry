@@ -9,19 +9,46 @@ namespace StreetNameRegistry.StreetName.Events.Crab
     [EventDescription("Legacy event om tblStraatnaam en tblStraatnaam_hist te importeren.")]
     public class StreetNameWasImportedFromCrab
     {
+        [EventPropertyDescription("CRAB-identificator van de straatnaam.")]
         public int StreetNameId { get; }
+        
+        [EventPropertyDescription("CRAB-identificator van de gemeente.")]
         public int MunicipalityId { get; }
+        
+        [EventPropertyDescription("Straatnaam in de primaire officiële taal.")]
         public string PrimaryStreetName { get; }
+        
+        [EventPropertyDescription("Straatnaam in de secundaire officiële taal.")]
         public string SecondaryStreetName { get; }
+        
+        [EventPropertyDescription("Tijdelijke opslag van een straatnaam in de primaire officiële taal.")]
         public string PrimaryTransStreetName { get; }
+        
+        [EventPropertyDescription("Tijdelijke opslag van een straatnaam in de secundaire officiële taal.")]
         public string SecondaryTransStreetName { get; }
+        
+        [EventPropertyDescription("Primaire officiële taal (voluit, EN) van de straatnaam.")]
         public CrabLanguage? PrimaryLanguage { get; }
+        
+        [EventPropertyDescription("Secundaire officiële taal (voluit, EN) van de straatnaam.")]
         public CrabLanguage? SecondaryLanguage { get; }
+        
+        [EventPropertyDescription("Tijdstip waarop het object werd ingevoerd in de databank.")]
         public Instant Timestamp { get; set; }
+        
+        [EventPropertyDescription("Datum waarop het object is ontstaan in werkelijkheid.")]
         public LocalDateTime? BeginDateTime { get; }
+        
+        [EventPropertyDescription("Datum waarop het object in werkelijkheid ophoudt te bestaan.")]
         public LocalDateTime? EndDateTime { get; }
+        
+        [EventPropertyDescription("Operator door wie het object werd ingevoerd in de databank.")]
         public string Operator { get; }
+        
+        [EventPropertyDescription("Bewerking waarmee het object werd ingevoerd in de databank.")]
         public CrabModification? Modification { get; }
+        
+        [EventPropertyDescription("Organisatie die het object heeft ingevoerd in de databank.")]
         public CrabOrganisation? Organisation { get; }
 
         public StreetNameWasImportedFromCrab(
